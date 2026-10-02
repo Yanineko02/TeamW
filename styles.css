@@ -184,7 +184,7 @@ a { color: inherit; }
   border: 1px solid rgba(147, 224, 212, .16);
   pointer-events: none;
 }
-.empty-preview-mark, .preview-mark { color: rgba(147, 224, 212, .15); font-family: "Arial Black", "Arial", sans-serif; font-size: clamp(8rem, 21vw, 18rem); font-weight: 900; line-height: 1; letter-spacing: -.13em; padding-right: .13em; }
+.empty-preview-mark { color: rgba(147, 224, 212, .15); font-family: "Arial Black", "Arial", sans-serif; font-size: clamp(8rem, 21vw, 18rem); font-weight: 900; line-height: 1; letter-spacing: -.13em; padding-right: .13em; }
 .card-preview img, .dialog-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .empty-copy, .card-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; min-width: 0; }
 .empty-line { display: block; width: 28px; height: 2px; background: var(--accent); }

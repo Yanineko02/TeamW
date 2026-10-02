@@ -21,21 +21,21 @@ function createPreview(project, className) {
     image.alt = `${project.name} 결과 화면`;
     image.loading = 'lazy';
     preview.append(image);
-  } else {
-    const mark = document.createElement('span');
-    mark.className = 'preview-mark';
-    mark.textContent = 'W';
-    mark.setAttribute('aria-hidden', 'true');
-    preview.append(mark);
   }
 
   return preview;
 }
 
+function projectLabel(project) {
+  if (project.visibility === 'public') return '공개 프로젝트';
+  if (project.visibility === 'private') return '비공개 프로젝트';
+  return '정보 준비 중';
+}
+
 function openProject(project, trigger) {
   lastTrigger = trigger;
   dialogPreview.replaceChildren(createPreview(project, 'dialog-image'));
-  dialogType.textContent = project.visibility === 'public' ? '공개 프로젝트' : '비공개 프로젝트';
+  dialogType.textContent = projectLabel(project);
   dialogTitle.textContent = project.name;
   dialogDescription.textContent = project.description;
 
@@ -65,7 +65,7 @@ function createCard(project) {
 
   const type = document.createElement('span');
   type.className = 'card-type';
-  type.textContent = project.visibility === 'public' ? '공개 프로젝트' : '비공개 프로젝트';
+  type.textContent = projectLabel(project);
 
   const name = document.createElement('strong');
   name.className = 'card-name';
