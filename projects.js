@@ -8,6 +8,7 @@ export const projects = [
     visibility: 'private',
     introUrl: 'https://naemokbom-intro.vercel.app/',
     planningUrl: 'https://naemokbom-planning-hub.vercel.app/',
+    checklistUrl: 'https://naemokbom-planning-hub.vercel.app/development/',
   },
   {
     name: 'StreamMIDI',
@@ -15,11 +16,12 @@ export const projects = [
     visibility: 'private',
     introUrl: 'https://twpro-intro-site.vercel.app/',
     planningUrl: 'https://twpro-planning-site.vercel.app/',
+    checklistUrl: 'https://twpro-planning-site.vercel.app/development/',
   },
 ];
 
 export function getProjectLink(project, kind = 'primary') {
-  const value = kind === 'intro' ? project.introUrl : project.visibility === 'public'
+  const value = kind === 'checklist' ? project.checklistUrl : kind === 'intro' ? project.introUrl : project.visibility === 'public'
     ? project.githubUrl
     : project.visibility === 'private'
       ? project.planningUrl
@@ -30,7 +32,7 @@ export function getProjectLink(project, kind = 'primary') {
   try {
     const url = new URL(value);
     if (url.protocol !== 'https:') return null;
-    if (kind !== 'intro' && project.visibility === 'public' && url.hostname !== 'github.com') return null;
+    if (kind === 'primary' && project.visibility === 'public' && url.hostname !== 'github.com') return null;
     return url.href;
   } catch {
     return null;

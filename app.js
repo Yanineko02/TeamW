@@ -1,4 +1,4 @@
-import { projects, getProjectLink } from './projects.js?v=20261002-streammidi';
+import { projects, getProjectLink } from './projects.js?v=20261002-checklist';
 
 const list = document.querySelector('#project-list');
 const count = document.querySelector('#project-count');
@@ -10,6 +10,7 @@ const dialogTitle = document.querySelector('#dialog-title');
 const dialogDescription = document.querySelector('#dialog-description');
 const dialogLink = document.querySelector('#dialog-link');
 const dialogIntroLink = document.querySelector('#dialog-intro-link');
+const dialogChecklistLink = document.querySelector('#dialog-checklist-link');
 let lastTrigger = null;
 
 function createPreview(project, className) {
@@ -44,6 +45,11 @@ function openProject(project, trigger) {
   dialogIntroLink.hidden = !introLink;
   if (introLink) dialogIntroLink.href = introLink;
   else dialogIntroLink.removeAttribute('href');
+
+  const checklistLink = getProjectLink(project, 'checklist');
+  dialogChecklistLink.hidden = !checklistLink;
+  if (checklistLink) dialogChecklistLink.href = checklistLink;
+  else dialogChecklistLink.removeAttribute('href');
 
   const link = getProjectLink(project);
   dialogLink.hidden = !link;
