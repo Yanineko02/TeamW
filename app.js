@@ -1,4 +1,4 @@
-import { projects, getProjectLink } from './projects.js?v=20261002-naemokbom-image';
+import { projects, getProjectLink } from './projects.js?v=20261002-streammidi';
 
 const list = document.querySelector('#project-list');
 const count = document.querySelector('#project-count');

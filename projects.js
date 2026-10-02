@@ -10,9 +10,10 @@ export const projects = [
     planningUrl: 'https://naemokbom-planning-hub.vercel.app/',
   },
   {
-    name: 'TWPRO',
+    name: 'StreamMIDI',
     description: '음악 제작과 라이브 방송을 위한 DAW 프로젝트입니다.',
     visibility: 'private',
+    introUrl: 'https://twpro-intro-site.vercel.app/',
     planningUrl: 'https://twpro-planning-site.vercel.app/',
   },
 ];
