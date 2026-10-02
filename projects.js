@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     name: 'TWPRO',
-    description: '음악 제작과 라이브 방송 오디오를 함께 다루는 Windows 우선 DAW 프로젝트입니다. 개인 모니터링과 방송용 믹스를 분리하는 방향으로 기획 중이며, 실행 가능한 제품은 아직 없습니다.',
+    description: '음악 제작과 라이브 방송을 위한 DAW 프로젝트입니다.',
     visibility: 'private',
     planningUrl: 'https://twpro-planning-site.vercel.app/',
   },

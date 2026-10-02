@@ -1,4 +1,4 @@
-import { projects, getProjectLink } from './projects.js?v=20261002-project-links';
+import { projects, getProjectLink } from './projects.js?v=20261002-twpro-summary';
 
 const list = document.querySelector('#project-list');
 const count = document.querySelector('#project-count');
