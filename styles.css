@@ -194,6 +194,7 @@ a { color: inherit; }
 }
 .empty-preview-mark { color: rgba(147, 224, 212, .15); font-family: "Arial Black", "Arial", sans-serif; font-size: clamp(8rem, 21vw, 18rem); font-weight: 900; line-height: 1; letter-spacing: -.13em; padding-right: .13em; }
 .card-preview img, .dialog-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.card-preview:has(img)::before, .dialog-image:has(img)::before { display: none; }
 .empty-copy, .card-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; min-width: 0; }
 .empty-line { display: block; width: 28px; height: 2px; background: var(--accent); }
 .empty-copy h3 { max-width: 13ch; margin: 28px 0 18px; font-size: clamp(2rem, 3.3vw, 3.8rem); line-height: 1.18; letter-spacing: -.055em; word-break: keep-all; }

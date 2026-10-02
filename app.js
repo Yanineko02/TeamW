@@ -1,4 +1,4 @@
-import { projects, getProjectLink } from './projects.js?v=20261002-twpro-summary';
+import { projects, getProjectLink } from './projects.js?v=20261002-naemokbom-image';
 
 const list = document.querySelector('#project-list');
 const count = document.querySelector('#project-count');
