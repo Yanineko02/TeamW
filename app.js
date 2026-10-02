@@ -1,4 +1,4 @@
-import { projects, getProjectLink } from './projects.js?v=20261002-projects';
+import { projects, getProjectLink } from './projects.js?v=20261002-project-links';
 
 const list = document.querySelector('#project-list');
 const count = document.querySelector('#project-count');
@@ -9,6 +9,7 @@ const dialogType = document.querySelector('#dialog-type');
 const dialogTitle = document.querySelector('#dialog-title');
 const dialogDescription = document.querySelector('#dialog-description');
 const dialogLink = document.querySelector('#dialog-link');
+const dialogIntroLink = document.querySelector('#dialog-intro-link');
 let lastTrigger = null;
 
 function createPreview(project, className) {
@@ -38,6 +39,11 @@ function openProject(project, trigger) {
   dialogType.textContent = projectLabel(project);
   dialogTitle.textContent = project.name;
   dialogDescription.textContent = project.description;
+
+  const introLink = getProjectLink(project, 'intro');
+  dialogIntroLink.hidden = !introLink;
+  if (introLink) dialogIntroLink.href = introLink;
+  else dialogIntroLink.removeAttribute('href');
 
   const link = getProjectLink(project);
   dialogLink.hidden = !link;

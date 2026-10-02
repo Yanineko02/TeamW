@@ -224,8 +224,11 @@ a { color: inherit; }
 .dialog-type { color: var(--accent); font-size: .9rem; font-weight: 700; }
 .dialog-content h2 { margin: 24px 0; font-size: clamp(2.25rem, 3.4vw, 4rem); line-height: 1.15; letter-spacing: -.055em; overflow-wrap: anywhere; }
 .dialog-content p { margin: 0; color: var(--muted); font-size: 1.06rem; line-height: 1.78; white-space: pre-wrap; word-break: keep-all; }
-.dialog-link { display: inline-flex; margin-top: 38px; padding: 15px 22px; border: 1px solid var(--accent); color: var(--bg); background: var(--accent); text-decoration: none; font-size: .96rem; font-weight: 800; }
+.dialog-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px; }
+.dialog-link { display: inline-flex; padding: 15px 22px; border: 1px solid var(--accent); color: var(--bg); background: var(--accent); text-decoration: none; font-size: .96rem; font-weight: 800; }
+.dialog-link-secondary { color: var(--accent); background: transparent; }
 .dialog-link:hover { color: var(--accent); background: transparent; }
+.dialog-link-secondary:hover { color: var(--bg); background: var(--accent); }
 .dialog-link[hidden] { display: none; }
 
 @media (max-width: 880px) {
