@@ -1,2 +1,0 @@
-# TeamW
-TeamW portfolio site

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080b14" />
+    <meta name="description" content="TeamW의 프로젝트와 개발 과정을 소개하는 포트폴리오." />
+    <title>TeamW — Projects</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#projects">프로젝트로 건너뛰기</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="TeamW 첫 화면으로">
+        <span class="brand-symbol" aria-hidden="true">W</span>
+        <span>TeamW</span>
+      </a>
+      <nav class="site-nav" aria-label="주 메뉴">
+        <a href="#projects">프로젝트</a>
+        <a href="https://github.com/Yanineko02/" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="hero-kicker">TeamW portfolio</p>
+          <h1 id="hero-title">Team<span>W</span></h1>
+          <p class="hero-description">기획에서 구현까지, 진행 중인 프로젝트를 기록합니다.</p>
+          <a class="hero-link" href="#projects">프로젝트 보기 <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-stage" aria-hidden="true">
+          <div class="stage-grid"></div>
+          <div class="stage-frame stage-frame-back"></div>
+          <div class="stage-frame stage-frame-front"></div>
+          <span class="stage-letter">W</span>
+          <span class="stage-corner stage-corner-top"></span>
+          <span class="stage-corner stage-corner-bottom"></span>
+        </div>
+        <div class="hero-bottom" aria-hidden="true">
+          <span>Design / Build / Iterate</span>
+          <span>Scroll to explore ↓</span>
+        </div>
+      </section>
+
+      <section class="projects-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Selected work</p>
+            <h2 id="projects-title">Projects<span class="heading-period">.</span></h2>
+          </div>
+          <p id="project-count" class="project-count">프로젝트 준비 중</p>
+        </div>
+
+        <div id="project-list" class="project-list">
+          <div class="project-empty">
+            <div class="empty-preview" aria-hidden="true">
+              <span class="empty-preview-mark">W</span>
+            </div>
+            <div class="empty-copy">
+              <span class="empty-line"></span>
+              <h3>프로젝트를 준비 중입니다.</h3>
+              <p>선정한 프로젝트의 이름, 설명과 연결 주소가 이곳에 표시됩니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span class="footer-brand">TeamW</span>
+      <div class="footer-right">
+        <span>프로젝트의 기획과 결과물</span>
+        <a href="https://github.com/Yanineko02/" target="_blank" rel="noopener noreferrer">GitHub 프로필</a>
+      </div>
+    </footer>
+
+    <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-shell">
+        <button id="dialog-close" class="dialog-close" type="button" aria-label="프로젝트 상세 닫기">×</button>
+        <div id="dialog-preview" class="dialog-preview"></div>
+        <div class="dialog-content">
+          <span id="dialog-type" class="dialog-type"></span>
+          <h2 id="dialog-title"></h2>
+          <p id="dialog-description"></p>
+          <a id="dialog-link" class="dialog-link" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
+
