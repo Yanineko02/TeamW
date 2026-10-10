@@ -18,6 +18,14 @@ export const projects = [
     planningUrl: 'https://twpro-planning-site.vercel.app/',
     checklistUrl: 'https://twpro-planning-site.vercel.app/development/',
   },
+  {
+    name: 'DocEditor',
+    description: 'hwp, hwpx, doc, docx 문서를 모두 열고 수정·편집할 수 있는 데스크톱 문서 편집기입니다.',
+    visibility: 'private',
+    introUrl: 'https://doceditor-intro-site.vercel.app/',
+    planningUrl: 'https://doceditor-planning-site.vercel.app/',
+    checklistUrl: 'https://doceditor-planning-site.vercel.app/development/',
+  },
 ];
 
 export function getProjectLink(project, kind = 'primary') {

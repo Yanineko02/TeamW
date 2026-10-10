@@ -1,4 +1,4 @@
-import { projects, getProjectLink } from './projects.js?v=20261002-checklist';
+import { projects, getProjectLink } from './projects.js?v=20261010-doceditor';
 
 const list = document.querySelector('#project-list');
 const count = document.querySelector('#project-count');
